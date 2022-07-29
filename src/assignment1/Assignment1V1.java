@@ -19,7 +19,7 @@ public class Assignment1V1 {
         eventQueue.add(event);
         simulator.initialize(eventQueue);
         System.out.printf("Simulation Trace:");
-        System.out.printf("\n==============================\n");
+        System.out.printf("\n==================\n");
         simulator.run(20);
         shopModel.showGroups();
         shopModel.showLog();

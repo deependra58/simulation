@@ -46,4 +46,8 @@ public class ShopModel {
          }
      }
      
+     public void serveOrder(int time,CustomerGroup g){
+         System.out.printf("t=%d: Order served for Group %d\n",time,g.getId());
+     }
+     
 }

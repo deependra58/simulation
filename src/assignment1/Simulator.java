@@ -31,6 +31,7 @@ public class Simulator implements IScheduler {
                
         while (clock <= stopTime) {
             e.process(model, this);
+            
             e = events.remove(0);
             clock = e.getTime();
         }
