@@ -17,7 +17,7 @@ public class ArrivalEvent extends Event {
         shopModel.logGroup(customerGroup);
         shopModel.addGroup(customerGroup);
         System.out.printf("t=%d: group %d <%d people> arrived.\n", customerGroup.getArrivalTime(), customerGroup.getId(), customerGroup.getNumberInGroup());
-       //Order Event
+       //Order Event after 1 time unit
         Event orderEvent=new OrderEvent(customerGroup,customerGroup.getArrivalTime()+1);
         scheduler.schedule(orderEvent);
 

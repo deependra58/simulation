@@ -35,12 +35,14 @@ public class Simulator implements IScheduler {
             e = events.remove(0);
             clock = e.getTime();
         }
-
-        
     }
 
     @Override
     public void schedule(Event e) {
+
+        // can we have a separate function to sort the events accoring to time ?
+        this.events.add
+
         this.events.add(e);
     }
     

@@ -15,6 +15,9 @@ public class OrderEvent extends Event {
     @Override
     public void process(ShopModel shopModel, IScheduler scheduler) {
         shopModel.serveOrder(group.getArrivalTime() + 1, group);
+        //Leave event
+        Event leaveEvent = new LeaveEvent(group, group.getArrivalTime() + 10);
+        scheduler.schedule(leaveEvent);
     }
 
 }
