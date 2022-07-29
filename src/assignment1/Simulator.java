@@ -1,10 +1,10 @@
 package assignment1;
 
 import java.util.ArrayList;
-
 /**
  *
- * @author Deependra Karki
+ * @author Deependra Karki 
+ * @student_id 12151622
  */
 public class Simulator implements IScheduler {
     
@@ -19,7 +19,7 @@ public class Simulator implements IScheduler {
     }
     
     public void initialize(ArrayList<Event> events){
-        
+        this.events=events;
     }
     
     public void run(int stopTime){
@@ -28,11 +28,9 @@ public class Simulator implements IScheduler {
         
         Event e = events.remove(0);
         clock = e.getTime();
-       
+               
         while (clock <= stopTime) {
-            e.process(model, this);// the this argument means that we are   
-                                   // passing a reference to this simulator 
-                                   // object to the event’s process method.
+            e.process(model, this);
             e = events.remove(0);
             clock = e.getTime();
         }
@@ -41,8 +39,8 @@ public class Simulator implements IScheduler {
     }
 
     @Override
-    public void Schedule(Event e) {
-        
+    public void schedule(Event e) {
+        this.events.add(e);
     }
     
     

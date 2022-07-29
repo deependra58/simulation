@@ -1,10 +1,8 @@
 package assignment1;
-
-
 /**
  *
  * @author Deependra Karki 
- * @id 12151622
+ * @student_id 12151622
  */
 public class CustomerGroup {
    
