@@ -16,7 +16,7 @@ public class OrderEvent extends Event {
     public void process(ShopModel shopModel, IScheduler scheduler) {
         shopModel.serveOrder(group.getArrivalTime() + 1, group);
         //Leave event
-        Event leaveEvent = new LeaveEvent(group, group.getArrivalTime() + 10);
+        Event leaveEvent = new LeaveEvent(group, group.getArrivalTime() + 11);
         scheduler.schedule(leaveEvent);
     }
 
