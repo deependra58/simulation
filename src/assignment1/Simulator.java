@@ -6,6 +6,7 @@ import java.util.ArrayList;
  * @author Deependra Karki
  * @student_id 12151622
  */
+
 public class Simulator implements IScheduler {
 
     private ArrayList<Event> events = new ArrayList<Event>();
