@@ -1,5 +1,6 @@
 package assignment1;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 
 public class Assignment1V1 {
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         ShopModel shopModel = new ShopModel(8);
         Simulator simulator = new Simulator(shopModel);
@@ -23,8 +24,8 @@ public class Assignment1V1 {
         System.out.printf("\n==================\n");
         simulator.run(20);
         shopModel.showStatistics();
-        shopModel.showGroups();
-        shopModel.showLog();
+//        shopModel.showGroups();
+//        shopModel.showLog();
     }
 
 }
