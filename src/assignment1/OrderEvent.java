@@ -7,6 +7,9 @@ public class OrderEvent extends Event {
 
     private CustomerGroup group;
 
+    private int leaveLowerBound = 5;
+    private int leaveGeneratorBound = 12;
+
     public OrderEvent(CustomerGroup group, int time) {
         super(time);
         this.group = group;
@@ -14,9 +17,9 @@ public class OrderEvent extends Event {
 
     @Override
     public void process(ShopModel shopModel, IScheduler scheduler) {
-        shopModel.serveOrder(group.getArrivalTime() + 1, group);
+        shopModel.serveOrder(this.getTime(), group);
         //Leave event
-        Event leaveEvent = new LeaveEvent(group, group.getArrivalTime() + 11);
+        Event leaveEvent = new LeaveEvent(group, this.getTime()+getGenerator().nextInt(this.leaveGeneratorBound) + this.leaveLowerBound);
         scheduler.schedule(leaveEvent);
     }
 
