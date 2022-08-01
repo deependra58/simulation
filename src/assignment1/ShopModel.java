@@ -21,6 +21,7 @@ public class ShopModel {
     }
 
     public void logGroup(CustomerGroup g) {
+        System.out.printf("t=%d: group %d <%d people> arrived.\n", g.getArrivalTime(), g.getId(), g.getNumberInGroup());
         history.add(g);
     }
 
