@@ -1,13 +1,14 @@
 Statistics:
 ==============
-The number of people served = 12
-The lost business = 10 people
+The number of people served = 16
+The lost business = 6 people
 
 The following groups are in the shop:
 =====================================
 Group 	6 (2 people) at t=12
 Group 	7 (2 people) at t=14
 Group 	8 (2 people) at t=16
+Group 	9 (2 people) at t=18
 
 The following groups are in the history/log:
 =====================================
