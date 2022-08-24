@@ -100,7 +100,7 @@ public class ShopModel {
 
     public boolean canSeat(int time, CustomerGroup group) {
 
-        if (this.numSeats > group.getNumberInGroup()) {
+        if (this.numSeats >= group.getNumberInGroup()) {
             System.out.printf("t=\t%d: Group %d <%d people> seated.\n", time, group.getId(), group.getNumberInGroup());
             this.numSeats -= group.getNumberInGroup();
             this.numServed += group.getNumberInGroup();
