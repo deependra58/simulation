@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * @author Deependra Karki
  * @student_id 12151622
  */
-public class Assignment1V1 {
+public class Assignment1 {
 
     public static void main(String[] args) throws IOException {
 

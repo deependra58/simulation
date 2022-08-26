@@ -57,17 +57,8 @@ public class ShopModel {
         wr.write("\nThe following groups are in the shop:");
         wr.write("\n=====================================\n");
         for (CustomerGroup group : groups) {
-            wr.write("Group \t" + group.getId() + " (" + group.getNumberInGroup() + " people) at t=" + group.getArrivalTime()+"\n");
+            wr.write("Group \t" + group.getId() + " (" + group.getNumberInGroup() + " people) at t=" + group.getArrivalTime() + "\n");
         }
-
-
-//
-//
-//        System.out.println("\nThe following groups are in the shop:");
-//        System.out.println("=====================================");
-//        for (CustomerGroup group : groups) {
-//            System.out.printf("Group %d (%d people) at t=%d\n", group.getId(), group.getNumberInGroup(), group.getArrivalTime());
-//        }
     }
 
     public void showLog(FileWriter wr) throws IOException {
@@ -75,16 +66,8 @@ public class ShopModel {
         wr.write("\nThe following groups are in the history/log:");
         wr.write("\n=====================================\n");
         for (CustomerGroup group : history) {
-            wr.write("Group \t" + group.getId() + " (" + group.getNumberInGroup() + " people) at t=" + group.getArrivalTime()+"\n");
+            wr.write("Group \t" + group.getId() + " (" + group.getNumberInGroup() + " people) at t=" + group.getArrivalTime() + "\n");
         }
-
-
-
-//        System.out.printf("\nThe following groups are in the history/log:\n");
-//        System.out.println("============================================");
-//        for (CustomerGroup group : history) {
-//            System.out.printf("Group %d (%d people) at t=%d\n", group.getId(), group.getNumberInGroup(), group.getArrivalTime());
-//        }
     }
 
     public void serveOrder(int time, CustomerGroup g) {
@@ -112,6 +95,5 @@ public class ShopModel {
 
         }
     }
-
 
 }
