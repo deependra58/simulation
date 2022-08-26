@@ -26,7 +26,6 @@ public class LeaveEvent extends Event {
      * @param shopmodel
      * @param scheduler
      */
-
     @Override
     public void process(ShopModel shopmodel, IScheduler scheduler) {
         shopmodel.leave(this.getTime(), group);

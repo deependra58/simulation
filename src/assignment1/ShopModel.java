@@ -131,7 +131,6 @@ public class ShopModel {
      * @param time- Time at what the customer left the shop.
      * @param g-    Customer group that left the shop.
      */
-
     public void leave(int time, CustomerGroup g) {
         System.out.printf("t=\t%d: Group %d leaves \n", time, g.getId());
         this.numSeats += g.getNumberInGroup();
@@ -146,7 +145,6 @@ public class ShopModel {
      * @param group- Customer group that arrived in the shop.
      * @return- true if number of seats is greater or equal to no. of people in arriving customer group else returns false.
      */
-
     public boolean canSeat(int time, CustomerGroup group) {
 
         if (this.numSeats >= group.getNumberInGroup()) {
@@ -158,7 +156,6 @@ public class ShopModel {
             System.out.printf("t=\t%d: Group %d leaves as there are insufficient seats for the group.\n", group.getArrivalTime(), group.getId());
             this.lostBusiness += group.getNumberInGroup();
             return false;
-
         }
     }
 

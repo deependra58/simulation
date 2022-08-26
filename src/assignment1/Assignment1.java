@@ -6,14 +6,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- * Contains a main method that initiates the simulation and writes the simulation output to a file.
+ * This class contains a main method that initiates the simulation process and writes the simulation output to a file.
  *
  * @author Deependra Karki
  */
 public class Assignment1 {
 
     /**
-     * This is the main method which initiates the simulation and writes the simulation outputs to a file.
+     * Creates and add first arrival event to event queue at time 0.
+     * Simulator is passed an event queue.
+     * Writes the simulation outputs to a file.
      *
      * @param args- Application startup arguments.
      * @throws IOException if the file cannot be created, or cannot be opened or cannot be written for any reason.
@@ -21,12 +23,10 @@ public class Assignment1 {
 
     public static void main(String[] args) throws IOException {
 
-        //Number of seats in the shop set to 8
         ShopModel shopModel = new ShopModel(8);
         Simulator simulator = new Simulator(shopModel);
         ArrayList<Event> eventQueue = new ArrayList<Event>();
 
-        //First arrival event scheduled at time 0
         Event event = new ArrivalEvent(0);
         eventQueue.add(event);
         simulator.initialize(eventQueue);
@@ -35,7 +35,6 @@ public class Assignment1 {
         System.out.printf("\n==================\n");
         simulator.run(20);
 
-        //Creates a file statistics.txt in current directory
         File file = new File("statistics.txt");
         FileWriter wr = new FileWriter(file);
         wr.write("Statistics:\n");

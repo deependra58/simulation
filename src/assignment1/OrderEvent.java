@@ -33,7 +33,6 @@ public class OrderEvent extends Event {
     @Override
     public void process(ShopModel shopModel, IScheduler scheduler) {
         shopModel.serveOrder(this.getTime(), group);
-        //Leave event
         Event leaveEvent = new LeaveEvent(group, this.getTime() + getGenerator().nextInt(this.leaveGeneratorBound) + this.leaveLowerBound);
         scheduler.schedule(leaveEvent);
     }

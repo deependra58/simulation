@@ -14,7 +14,7 @@ public class CustomerGroup {
     /**
      * Class constructor that initializes customer group.
      *
-     * @param id-            Customer group ID
+     * @param id-Customer group ID
      * @param numberInGroup- No. of people in the customer group.
      * @param arrivalTime-   Time at which the customer group arrived.
      */
