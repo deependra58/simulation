@@ -25,8 +25,6 @@ public class ShopModel {
 
     private int numServed = 0;
 
-    File file = new File("statistics.txt");
-
     public ShopModel(int numSeats) {
         this.numSeats = numSeats;
     }
@@ -112,24 +110,5 @@ public class ShopModel {
 
         }
     }
-
-    public void showStatistics() throws IOException {
-
-        FileWriter wr = new FileWriter(file);
-        wr.write("Statistics:\n");
-        wr.write("==============\n");
-        wr.write("The number of people served = " + this.getNumServed() + "\n");
-        wr.write("The lost business = " + this.getLostBusiness() + " people\n");
-        this.showGroups(wr);
-        this.showLog(wr);
-        wr.close();
-
-//        System.out.printf("\nStatistics:\n");
-//        System.out.println("==============");
-//        System.out.printf("The number of people served=%d \n", this.getNumServed());
-//        System.out.printf("The lost business=%d people\n", this.getLostBusiness());
-
-    }
-
 
 }
